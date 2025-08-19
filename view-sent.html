@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-mails Enviados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>E-mails Enviados</h2>
+    <ul id="sentList"></ul>
+    <script>
+        const sentForms = JSON.parse(localStorage.getItem('sentForms') || '[]');
+        const list = document.getElementById('sentList');
+        sentForms.forEach((form, index) => {
+            const li = document.createElement('li');
+            li.textContent = `${index + 1}. Nome: ${form.nome}, Email: ${form.email}, Telefone: ${form.telefone}, Mensagem: ${form.mensagem}, Enviado: ${new Date(form.timestamp).toLocaleString()}`;
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>

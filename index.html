@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delian Freitas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scripts.js">
+    <link rel="stylesheet" href="view-sent.html">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <img src="./assets/logo.png" alt="Delian Freitas Logo" class="logo">
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#trabalhos">Trabalhos</a>
+                <a href="#contato">Orçamento</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Transformando sua casa com qualidade e beleza</h2>
+            <p>Azulejos, pisos e reformas com dedicação e atenção aos detalhes.</p>
+            <a href="#contato" class="btn">Peça um Orçamento</a>
+        </div>
+        <div class="hero-image">
+            <img src="./assets/ferramentas.png" alt="Pedreiro Azulejista">
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="./assets/image.png" alt="Pisos">
+                <h3>Pisos e Azulejos</h3>
+                <p>Colocação de pisos e azulejos com precisão e qualidade que dura anos.</p>
+            </div>
+            <div class="card">
+                <img src="./assets/construcao.png" alt="Reformas">
+                <h3>Reformas</h3>
+                <p>Reformas completas com atenção aos detalhes e acabamento impecável.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trabalhos" class="gallery-section">
+        <h2>Trabalhos Recentes</h2>
+        <div class="gallery">
+            <img src="./assets/construcao.png" alt="Banheiro">
+            <img src="./assets/image.png" alt="Cozinha">
+            <img src="./assets/image.png" alt="Sala">
+            <img src="./assets/construcao.png" alt="Varanda">
+        </div>
+    </section>
+
+    <section id="contato" class="contact-section">
+        <h2>Peça Seu Orçamento</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="tel" name="telefone" placeholder="Seu Celular" required>
+            <textarea name="mensagem" rows="5" placeholder="Descreva o serviço desejado" required></textarea>
+            <button type="submit">Enviar Orçamento</button>
+        </form>
+
+        <!-- Popup -->
+        <div id="successPopup" class="popup">
+            <div class="popup-content">
+                <p>Enviado com sucesso!</p>
+                <button id="closePopup">Fechar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://wa.me/5511981808260?text=Ol%C3%A1%20Delian,%20gostaria%20de%20um%20or%C3%A7amento"
+            target="_blank" class="whatsapp-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40">
+        </a>
+        <p>&copy; 2025 Delian Freitas | Contato: <a href="tel:+5511981808260">(11) 98180-8260</a> | <a
+                href="mailto:delianfreitas67@gmail.com">delianfreitas67@gmail.com</a></p>
+    </footer>
+
+    <!-- Link pro arquivo JS -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
