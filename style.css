@@ -368,3 +368,142 @@ footer p {
         grid-template-columns: 1fr; /* 1 coluna */
     }
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets (até 900px) */
+@media (max-width: 900px) {
+    header {
+        padding: 5px 0; /* Reduz o padding do cabeçalho */
+        height: 100px; /* Altura fixa para o cabeçalho */
+    }
+
+    header .container {
+        flex-direction: row; /* Mantém a logo e a navegação lado a lado */
+        align-items: center; /* Alinha verticalmente no centro */
+        justify-content: space-between; /* Espaçamento entre logo e nav */
+        gap: 10px; /* Espaço entre os itens */
+    }
+
+    .logo {
+        height: 200px; /* Ajusta a altura da logo para caber no cabeçalho */
+        max-height: none; /* Remove limite de altura máxima */
+        object-fit: contain; /* Ajusta a imagem sem cortar */
+        transform: translate(-25px, -50px); /* esquerda 50px e para cima 50px */
+    }
+
+    nav a {
+        margin: 0 5px; /* Diminui a margem entre os links */
+        font-size: 0.9em; /* Tamanho de fonte ajustado */
+        transform: translate(-50px, -50px); /* esquerda 50px e para cima 50px */
+    }
+
+    nav {
+        display: flex; /* Mantém a navegação em linha */
+        flex-wrap: wrap; /* Permite que os links quebrem se necessário */
+        justify-content: center; /* Centraliza os links */
+        gap: 10px; /* Espaço entre os links */
+    }
+
+    /* nav a {
+        font-size: 1em; /* Tamanho de fonte ajustado */
+    /* }  */
+
+    .hero {
+        flex-direction: column; /* Alinha conteúdo da hero verticalmente */
+        text-align: center; /* Centraliza texto */
+        gap: 30px; /* Espaço entre os elementos */
+    }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 5px 0; /* Reduz o padding do cabeçalho */
+        height: 100px; /* Altura fixa para o cabeçalho */
+    }
+
+    .logo {
+        height: 200px; /* Ajusta a altura da logo para caber no cabeçalho */
+        max-height: none; /* Remove limite de altura máxima */
+        object-fit: contain; /* Ajusta a imagem sem cortar */
+        transform: translate(-55px, -50px); /* esquerda 50px e para cima 50px */
+    }
+
+    nav a {
+        margin: 0 5px; /* Diminui a margem entre os links */
+        font-size: 0.9em; /* Tamanho de fonte ajustado */
+        transform: translateY(-50px); /* move 20px para cima */
+    }
+
+    .hero-content h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    .hero-content p {
+        font-size: 0.9em; /* Reduz o tamanho do parágrafo */
+    }
+
+    .hero-image img {
+        max-width: 100%; /* Garante que a imagem da hero não exceda o container */
+        height: auto; /* Mantém a proporção */
+    }
+
+    .cards {
+        flex-direction: column; /* Alinhamento vertical dos cards */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .card {
+        max-width: 90%; /* Limita a largura dos cards */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para celulares maiores */
+    }
+
+    .contact-form {
+        width: 100%; /* Formulário ocupa 100% da tela */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9em; /* Ajusta o tamanho da fonte */
+    }
+
+    .contact-form button {
+        padding: 12px; /* Ajusta o padding do botão */
+    }
+}
+
+/* Pequenos Celulares (até 400px) */
+@media (max-width: 400px) {
+.logo {
+        height: 200px; /* Ajusta a altura da logo para caber no cabeçalho */
+        max-height: none; /* Remove limite de altura máxima */
+        object-fit: contain; /* Ajusta a imagem sem cortar */
+        transform: translate(-55px, -50px); /* esquerda 50px e para cima 50px */
+    }
+
+    nav a {
+        margin: 0 5px; /* Diminui a margem entre os links */
+        font-size: 0.9em; /* Tamanho de fonte ajustado */
+        transform: translateY(-50px); /* move 20px para cima */
+    }
+
+    /* nav a {
+        font-size: 0.8em; /* Tamanho ainda menor para links */
+    /* }  */
+
+    .hero-content h2 {
+        font-size: 1.3em; /* Ajusta o título para telas pequenas */
+    }
+
+    .hero-content p {
+        font-size: 0.8em; /* Ajusta o parágrafo para telas pequenas */
+    }
+
+    .card {
+        max-width: 100%; /* Cada card ocupa 100% */
+    }
+}
