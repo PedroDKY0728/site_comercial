@@ -293,3 +293,78 @@ footer p {
 .popup-content button:hover {
     transform: scale(1.05);
 }
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets (até 900px) */
+@media (max-width: 900px) {
+    header .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        max-height: unset;
+    }
+
+    .logo {
+        height: 150px; /* diminui o logo */
+        transform: none; /* remove deslocamento */
+    }
+
+    nav {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content {
+        margin-right: 0;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+}
+
+/* Celulares (até 600px) */
+@media (max-width: 600px) {
+    header .container {
+        padding: 0 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+}
