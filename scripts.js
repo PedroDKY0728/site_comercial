@@ -50,3 +50,21 @@ document.getElementById('closePopup').addEventListener('click', function() {
     document.getElementById('successPopup').style.display = 'none';
     console.log('Popup fechado manualmente!');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navigation = document.getElementById('navigation');
+
+    navigation.addEventListener('change', function () {
+        const targetSection = this.value;
+
+        if (targetSection && targetSection !== '#') {
+            const section = document.querySelector(targetSection);
+            if (section) {
+                // Rolar suavemente para a seção
+                section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});

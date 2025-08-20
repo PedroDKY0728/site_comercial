@@ -23,10 +23,13 @@
         <div class="container">
             <img src="./assets/logo.png" alt="Delian Freitas Logo" class="logo">
             <nav>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#trabalhos">Trabalhos</a>
-                <a href="#contato">Orçamento</a>
+                <select id="navigation" onchange="location = this.value;">
+                    <option value="#">Menu</option>
+                    <option value="#sobre">Sobre</option>
+                    <option value="#servicos">Serviços</option>
+                    <option value="#trabalhos">Trabalhos</option>
+                    <option value="#contato">Orçamento</option>
+                </select>
             </nav>
         </div>
     </header>
