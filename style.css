@@ -111,32 +111,20 @@ nav {
 }
 
 #navigation {
-    -webkit-appearance: none;
-    /* Remove o estilo padrão do select em navegadores WebKit */
-    -moz-appearance: none;
-    /* Remove o estilo padrão do select em navegadores Firefox */
-    appearance: none;
-    /* Remove o estilo padrão do select em navegadores modernos */
-    background-color: #ffd700;
-    /* Cor de fundo */
-    border: 1px solid #000000;
-    /* Borda */
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    padding: 10px;
-    /* Espaçamento interno */
-    font-size: 16px;
-    /* Tamanho da fonte */
-    cursor: pointer;
-    /* Cursor de ponteiro */
-    width: 120px;
-    /* Largura do select */
+    -webkit-appearance: none;  /* Remove o estilo padrão do select em navegadores WebKit */
+    -moz-appearance: none;     /* Remove o estilo padrão do select em navegadores Firefox */
+    appearance: none;          /* Remove o estilo padrão do select em navegadores modernos */
+    background-color: #ffd700;   /* Cor de fundo */
+    border: 1px solid #000000;   /* Borda */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    padding: 10px;            /* Espaçamento interno */
+    font-size: 16px;          /* Tamanho da fonte */
+    cursor: pointer;          /* Cursor de ponteiro */
+    width: 120px;             /* Largura do select */
 }
 
 #navigation:focus {
-    outline: none;
-    /* Remove o contorno do foco */
-    border-color: #007BFF;
-    /* Cor da borda quando em foco */
+    outline: none;            /* Remove o contorno do foco */
+    border-color: #007BFF;   /* Cor da borda quando em foco */
 }
 
 html {
@@ -144,19 +132,17 @@ html {
 }
 
 nav::after {
-    content: '▼';
-    /* Adiciona uma seta para indicar que é um select */
+    content: '▼';             /* Adiciona uma seta para indicar que é um select */
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    pointer-events: none;
-    /* Impede a interação com a seta */
+    pointer-events: none;     /* Impede a interação com a seta */
     color: black;
 }
 
-nav select {
-    border-radius: 5px;
+nav select{
+border-radius: 5px;
 }
 
 .cards {
@@ -347,278 +333,135 @@ footer p {
     transform: scale(1.05);
 }
 
-/* ===== RESPONSIVIDADE ===== */
-
-/* Tablets (até 900px) */
-@media (max-width: 900px) {
-    header .container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
-        max-height: unset;
-    }
-
-    .logo {
-        height: 150px;
-        /* diminui o logo */
-        transform: none;
-        /* remove deslocamento */
-    }
-
-    nav {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .hero-content {
-        margin-right: 0;
-    }
-
-    .cards {
-        justify-content: center;
-    }
-}
-
-/* Celulares (até 600px) */
-@media (max-width: 600px) {
-    header .container {
-        padding: 0 10px;
-    }
-
-    nav a {
-        margin: 0 10px;
-        font-size: 1em;
-    }
-
-    .hero-content h2 {
-        font-size: 1.8em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        max-width: 90%;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-        /* 1 coluna */
-    }
-}
 
 /* ===== RESPONSIVIDADE ===== */
+
 
 /* Tablets (até 900px) */
 @media (max-width: 900px) {
     header {
-        padding: 5px 0;
-        /* Reduz o padding do cabeçalho */
-        height: 100px;
-        /* Altura fixa para o cabeçalho */
+        padding: 5px 0; /* Reduz o padding do cabeçalho */
+        height: 100px; /* Altura fixa para o cabeçalho */
     }
 
     header .container {
-        flex-direction: row;
-        /* Mantém a logo e a navegação lado a lado */
-        align-items: center;
-        /* Alinha verticalmente no centro */
-        justify-content: space-between;
-        /* Espaçamento entre logo e nav */
-        gap: 10px;
-        /* Espaço entre os itens */
-    }
-
-    nav select {
-        font-size: 0.9em;
-        /* Ajusta o tamanho da fonte para tablets */
-        padding: 8px;
-        /* Ajusta o padding */
+        flex-direction: row; /* Mantém a logo e a navegação lado a lado */
+        align-items: center; /* Alinha verticalmente no centro */
+        justify-content: space-between; /* Espaçamento entre logo e nav */
+        gap: 10px; /* Espaço entre os itens */
     }
 
     .logo {
-        height: 200px;
-        /* Ajusta a altura da logo para caber no cabeçalho */
-        max-height: none;
-        /* Remove limite de altura máxima */
-        object-fit: contain;
-        /* Ajusta a imagem sem cortar */
-        transform: translate(-25px, -50px);
-        /* esquerda 50px e para cima 50px */
+        height: 200px; /* Ajusta a altura da logo para caber no cabeçalho */
+        max-height: none; /* Remove limite de altura máxima */
+        object-fit: contain; /* Ajusta a imagem sem cortar */
+        transform: translate(-25px, -50px); /* esquerda 50px e para cima 50px */
     }
 
     nav a {
-        margin: 0 5px;
-        /* Diminui a margem entre os links */
-        font-size: 0.9em;
-        /* Tamanho de fonte ajustado */
-        transform: translate(-50px, -50px);
-        /* esquerda 50px e para cima 50px */
+        margin: 0 5px; /* Diminui a margem entre os links */
+        font-size: 0.9em; /* Tamanho de fonte ajustado */
+        transform: translate(-50px, -50px); /* esquerda 50px e para cima 50px */
     }
 
     nav {
-        display: flex;
-        /* Mantém a navegação em linha */
-        flex-wrap: wrap;
-        /* Permite que os links quebrem se necessário */
-        justify-content: center;
-        /* Centraliza os links */
-        gap: 10px;
-        /* Espaço entre os links */
+        display: flex; /* Mantém a navegação em linha */
+        flex-wrap: wrap; /* Permite que os links quebrem se necessário */
+        justify-content: center; /* Centraliza os links */
+        gap: 10px; /* Espaço entre os links */
     }
 
     .hero {
-        flex-direction: column;
-        /* Alinha conteúdo da hero verticalmente */
-        text-align: center;
-        /* Centraliza texto */
-        gap: 30px;
-        /* Espaço entre os elementos */
+        flex-direction: column; /* Alinha conteúdo da hero verticalmente */
+        text-align: center; /* Centraliza texto */
+        gap: 30px; /* Espaço entre os elementos */
     }
 }
 
 /* Celulares (até 600px) */
 @media (max-width: 600px) {
     header {
-        padding: 5px 0;
-        /* Reduz o padding do cabeçalho */
-        height: 100px;
-        /* Altura fixa para o cabeçalho */
-    }
-
-    nav select {
-        transform: translate(-55px, -50px);
-        /* esquerda 50px e para cima 50px */
+        padding: 5px 0; /* Reduz o padding do cabeçalho */
+        height: 100px; /* Altura fixa para o cabeçalho */
     }
 
     .logo {
-        height: 200px;
-        /* Ajusta a altura da logo para caber no cabeçalho */
-        max-height: none;
-        /* Remove limite de altura máxima */
-        object-fit: contain;
-        /* Ajusta a imagem sem cortar */
-        transform: translate(-55px, -50px);
-        /* esquerda 50px e para cima 50px */
+        height: 200px; /* Ajusta a altura da logo para caber no cabeçalho */
+        max-height: none; /* Remove limite de altura máxima */
+        object-fit: contain; /* Ajusta a imagem sem cortar */
+        transform: translate(-55px, -50px); /* esquerda 50px e para cima 50px */
     }
 
     nav a {
-        margin: 0 5px;
-        /* Diminui a margem entre os links */
-        font-size: 0.9em;
-        /* Tamanho de fonte ajustado */
-        transform: translateY(-50px);
-        /* move 20px para cima */
+        margin: 0 5px; /* Diminui a margem entre os links */
+        font-size: 0.9em; /* Tamanho de fonte ajustado */
+        transform: translateY(-50px); /* move 20px para cima */
     }
 
     .hero-content h2 {
-        font-size: 1.5em;
-        /* Reduz o tamanho do título */
+        font-size: 1.5em; /* Reduz o tamanho do título */
     }
 
     .hero-content p {
-        font-size: 0.9em;
-        /* Reduz o tamanho do parágrafo */
+        font-size: 0.9em; /* Reduz o tamanho do parágrafo */
     }
 
     .hero-image img {
-        max-width: 100%;
-        /* Garante que a imagem da hero não exceda o container */
-        height: auto;
-        /* Mantém a proporção */
+        max-width: 100%; /* Garante que a imagem da hero não exceda o container */
+        height: auto; /* Mantém a proporção */
     }
 
     .cards {
-        flex-direction: column;
-        /* Alinhamento vertical dos cards */
-        align-items: center;
-        /* Centraliza os cards */
+        flex-direction: column; /* Alinhamento vertical dos cards */
+        align-items: center; /* Centraliza os cards */
     }
 
     .card {
-        max-width: 90%;
-        /* Limita a largura dos cards */
+        max-width: 90%; /* Limita a largura dos cards */
     }
 
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        /* Duas colunas para celulares maiores */
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas para celulares maiores */
     }
 
     .contact-form {
-        width: 100%;
-        /* Formulário ocupa 100% da tela */
+        width: 100%; /* Formulário ocupa 100% da tela */
     }
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 0.9em;
-        /* Ajusta o tamanho da fonte */
+        font-size: 0.9em; /* Ajusta o tamanho da fonte */
     }
 
     .contact-form button {
-        padding: 12px;
-        /* Ajusta o padding do botão */
+        padding: 12px; /* Ajusta o padding do botão */
     }
 }
 
 /* Pequenos Celulares (até 400px) */
 @media (max-width: 400px) {
-    .logo {
-        height: 300px;
-        /* Ajusta a altura da logo para caber no cabeçalho */
-        max-height: none;
-        /* Remove limite de altura máxima */
-        object-fit: contain;
-        /* Ajusta a imagem sem cortar */
-        transform: translate(-55px, -50px);
-        /* esquerda 50px e para cima 50px */
-    }
-
-    nav select {
-        transform: translate(-55px, -50px);
-        /* esquerda 50px e para cima 50px */
+.logo {
+        height: 300px; /* Ajusta a altura da logo para caber no cabeçalho */
+        max-height: none; /* Remove limite de altura máxima */
+        object-fit: contain; /* Ajusta a imagem sem cortar */
+        transform: translate(-55px, -50px); /* esquerda 50px e para cima 50px */
     }
 
     nav a {
-        margin: 0 5px;
-        /* Diminui a margem entre os links */
-        font-size: 0.9em;
-        /* Tamanho de fonte ajustado */
-        transform: translateY(-50px);
-        /* move 20px para cima */
+        margin: 0 5px; /* Diminui a margem entre os links */
+        font-size: 0.9em; /* Tamanho de fonte ajustado */
+        transform: translateY(-50px); /* move 20px para cima */
     }
 
     .hero-content h2 {
-        font-size: 1.3em;
-        /* Ajusta o título para telas pequenas */
+        font-size: 1.3em; /* Ajusta o título para telas pequenas */
     }
 
     .hero-content p {
-        font-size: 0.8em;
-        /* Ajusta o parágrafo para telas pequenas */
+        font-size: 0.8em; /* Ajusta o parágrafo para telas pequenas */
     }
 
     .card {
-        max-width: 100%;
-        /* Cada card ocupa 100% */
+        max-width: 100%; /* Cada card ocupa 100% */
     }
 }
